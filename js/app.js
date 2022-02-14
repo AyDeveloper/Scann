@@ -34,25 +34,25 @@ logout = async () => {
     window.location.href = "index.html"
 }
 
-window.addEventListener('load', e => {
-    const loader = document.querySelector('.loader');
-    loader.classList.add('displayLoader');
-    if (getUser() == null) {
-        console.log("Cannot get user");
-    } else {
-        const loader = document.querySelector('.loader');
-        getUser().then(user => {
-            setUserProfile(user);
-            getTransaction(user);
-            getNFTS1(user);
+// window.addEventListener('load', e => {
+//     const loader = document.querySelector('.loader');
+//     loader.classList.add('displayLoader');
+//     if (getUser() == null) {
+//         console.log("Cannot get user");
+//     } else {
+//         const loader = document.querySelector('.loader');
+//         getUser().then(user => {
+//             setUserProfile(user);
+//             getTransaction(user);
+//             getNFTS1(user);
 
-        })
-        setTimeout(() => {
-            loader.classList.remove('displayLoader');
-        }, 5000);
-    }
+//         })
+//         setTimeout(() => {
+//             loader.classList.remove('displayLoader');
+//         }, 5000);
+//     }
 
-})
+// })
 
 getUser = async () => {
     const user = await Moralis.User.current();
