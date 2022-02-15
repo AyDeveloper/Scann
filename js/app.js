@@ -7,8 +7,8 @@ Moralis.start({
     appId
 });
 
-// let homepage = "https://scann.netlify.app/index.html";
-let homepage = "http://127.0.0.1:5500/dashboard.html";
+let homepage = "https://scann.netlify.app/index.html";
+// let homepage = "http://127.0.0.1:5500/dashboard.html";
 
 // if (Moralis.User.current() == null && window.location.href != homepage) {
 //     document.body.style.display = "none";
