@@ -18,7 +18,7 @@ let homepage = "https://scann.netlify.app/index.html";
 
 login = async () => {
     await Moralis.authenticate({
-        signingMessage: "Multipurpose Dapp"
+        signingMessage: "Scann Dapp"
     }).then(async function (user) {
         console.log(user.get('ethAddress'), "logged in");
         addr = user.get('ethAddress');
